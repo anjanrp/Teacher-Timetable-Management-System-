@@ -44,6 +44,10 @@ sql_commands = [
         sub_name varchar(30),
         sub_desc varchar(50)
     );
+    """,
+    """
+    ALTER TABLE teacher
+    ADD FOREIGN KEY (login_id) REFERENCES login(login_id);
     """
 ]
 
