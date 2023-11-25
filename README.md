@@ -4,8 +4,7 @@ This is a basic implementation of a teacher timetable management system where th
                
 To replicate this , clone the repository and follow the steps given below 
 
-  Requirements - python and mysql connector -- pip install mysql-connector-python
-               streamlit -- pip install streamlit 
+  Requirements - python and mysql connector -- pip install mysql-connector-python and streamlit -- pip install streamlit 
   
   Change your root password whereever necessary to your mysql password in the python files.
   
