@@ -10,7 +10,9 @@ db = mysql.connector.connect(
 cursor = db.cursor()
 
 # SQL statement to create the period_changes table
-create_table_sql = """
+create_table_sql =[
+
+"""
 CREATE TABLE period_changes (
     change_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
@@ -21,8 +23,12 @@ CREATE TABLE period_changes (
     action VARCHAR(10) NOT NULL,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+""",
 """
-
+    ALTER TABLE period_changes
+    ADD FOREIGN KEY (cls_id) REFERENCES class(cls_id);
+"""
+]
 # Execute the SQL statement to create the table
 cursor.execute(create_table_sql)
 
