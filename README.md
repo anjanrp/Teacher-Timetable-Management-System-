@@ -3,6 +3,13 @@ This is a basic implementation of a teacher timetable management system where th
 
 change your root password whereever necessary to you mysql password
 
+Go to your mysql Terminal, enter password and run the following commands:
+
+CREATE DATABASE TEACHER_TIMETABLE_SYSTEM;
+USE TEACHER_TIMETABLE_SYSTEM;
+
+The mysql terminal can be closed now.
+
 Run the files in the following order:
 1. project.py
 2. periods.py
