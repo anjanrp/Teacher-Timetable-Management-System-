@@ -10,7 +10,9 @@ db_config = {
 }
 
 # Define the SQL command to create the "periods" table
-create_periods_table = """
+create_periods_table = [
+
+"""
 CREATE TABLE periods (
     t_name VARCHAR(50) NOT NULL,
     cls_id VARCHAR(30),
@@ -18,8 +20,18 @@ CREATE TABLE periods (
     day VARCHAR(10) NOT NULL,
     period INT NOT NULL
 );
-"""
+""",
 
+"""
+    ALTER TABLE periods
+    ADD FOREIGN KEY (cls_id) REFERENCES class(cls_id);
+""",
+
+"""
+    ALTER TABLE periods
+    ADD FOREIGN KEY (sub_name) REFERENCES subject(sub_name);
+"""
+]
 # Connect to the MySQL server
 connection = mysql.connector.connect(**db_config)
 
